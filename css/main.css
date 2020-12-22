@@ -12,9 +12,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
 }
 
 .job-list {
@@ -28,7 +25,6 @@
   transform: translateY(calc(-50% - 3.5rem));
   display: flex;
   align-items: center;
-  padding: 1.2rem;
   border-radius: 6px;
   margin: 0 auto;
   margin-bottom: 0rem;
@@ -39,7 +35,8 @@
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: -12px;
+  padding: 1.2rem;
+  padding-bottom: calc(1.2rem - 12px);
 }
 
 .job-list .search .tag-container .search-tag {
@@ -62,6 +59,7 @@
   font-size: 0.75rem;
   line-height: 1;
   margin-bottom: -2px;
+  font-weight: 700;
 }
 
 .job-list .search .tag-container .search-tag img {
@@ -72,8 +70,13 @@
   cursor: pointer;
 }
 
+.job-list .search .tag-container .search-tag img:hover {
+  background-color: #2c3a3a;
+}
+
 .job-list .search .clear-search {
   padding: 0.1rem 0.3rem;
+  margin-right: 1.2rem;
   cursor: pointer;
   color: #2c3a3a;
   font-size: 0.8rem;
@@ -89,7 +92,7 @@
 .job-list .jobs .job-card {
   width: 100%;
   max-width: 500px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 4rem;
   background-color: white;
   border-radius: 6px;
   position: relative;
@@ -180,6 +183,11 @@
   font-size: 13px;
 }
 
+.job-list .jobs .job-card__tags p:hover {
+  color: white;
+  background-color: #2c3a3a;
+}
+
 .job-list .jobs .job-card.featured {
   border-left: 4px solid #5ba4a4;
 }
@@ -208,5 +216,49 @@ p.attribution a svg {
 
 p.attribution a svg:hover {
   fill: #5ba4a4;
+}
+
+@media screen and (min-width: 1000px) {
+  .top-section {
+    background-color: #5ba4a4;
+    background-image: url(../images/bg-header-desktop.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .job-list .jobs .job-card {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  .job-list .jobs .job-card__details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .job-list .jobs .job-card__details img {
+    position: initial;
+    padding: 0;
+    transform: translateY(0);
+    width: 65px;
+    margin-right: 1rem;
+  }
+  .job-list .jobs .job-card__details .details {
+    border: none;
+    padding: 0;
+  }
+  .job-list .jobs .job-card__details .details .top .name {
+    font-size: 0.8rem;
+    margin-right: 0.6rem;
+  }
+  .job-list .jobs .job-card__details .details .role {
+    font-size: 17px;
+    margin: 0.3rem 0;
+  }
+  .job-list .jobs .job-card__details .details .bottom {
+    margin-top: 0.4rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
