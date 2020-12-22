@@ -19,12 +19,13 @@
 
 .job-list {
   background-color: #effafa;
+  padding-top: 3.5rem;
 }
 
 .job-list .search {
   width: 80%;
   background-color: white;
-  transform: translateY(-50%);
+  transform: translateY(calc(-50% - 3.5rem));
   display: flex;
   align-items: center;
   padding: 1.2rem;
