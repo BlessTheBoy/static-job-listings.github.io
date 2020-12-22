@@ -1,0 +1,110 @@
+@import "config";
+
+$DesaturatedDarkCyan: hsl(180, 29%, 50%);
+$LightGrayishCyanBackground: hsl(180, 52%, 96%);
+$LightGrayishCyanFilterTablets: hsl(180, 31%, 95%);
+$DarkGrayishCyan: hsl(180, 8%, 52%);
+$VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+
+.top-section {
+  height: 25vh;
+  background-color: $DesaturatedDarkCyan;
+  background-image: url(../images/bg-header-mobile.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.job-list {
+  //   padding: 4rem 1.5rem 2rem;
+  background-color: $LightGrayishCyanBackground;
+
+  .search {
+    width: 80%;
+    background-color: white;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    border-radius: 6px;
+    margin: 0 auto;
+    margin-bottom: 0rem;
+    box-shadow: 3px 13px 23px -8px rgba(91, 164, 164, 1);
+
+    .tag-container {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: -12px;
+
+      .search-tag {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        background-color: $LightGrayishCyanFilterTablets;
+        color: $DesaturatedDarkCyan;
+        border-radius: 4px;
+        margin-right: 12px;
+
+        &:not(:nth-child(n + 3)) {
+          margin-bottom: 12px;
+        }
+
+        p {
+          padding: 0 0.3rem;
+          font-size: 0.75rem;
+          line-height: 1;
+          margin-bottom: -2px;
+        }
+
+        img {
+          background-color: $DesaturatedDarkCyan;
+          padding: 0.3rem;
+          width: 20px;
+          object-fit: contain;
+          cursor: pointer;
+        }
+      }
+    }
+    .clear-search {
+      padding: 0.1rem 0.3rem;
+      cursor: pointer;
+      color: $VeryDarkGrayishCyan;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+  }
+
+  .jobs {
+    padding: 1.5rem;
+    margin-top: 0;
+    padding-top: 0;
+
+    .job-card {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 6px;
+      position: relative;
+      padding: 1.5rem;
+      padding-top: 40px;
+
+      &__details {
+        img {
+          position: absolute;
+          top: 0;
+          left: 1.5rem;
+          transform: translateY(-50%);
+          object-fit: contain;
+          width: 50px;
+        }
+      }
+    }
+    .job-card.featured {
+      border-left: 4px solid $DesaturatedDarkCyan;
+    }
+  }
+}

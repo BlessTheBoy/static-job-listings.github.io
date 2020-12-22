@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+.top-section {
+  height: 25vh;
+  background-color: #5ba4a4;
+  background-image: url(../images/bg-header-mobile.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.job-list {
+  background-color: #effafa;
+}
+
+.job-list .search {
+  width: 80%;
+  background-color: white;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  border-radius: 6px;
+  margin: 0 auto;
+  margin-bottom: 0rem;
+  box-shadow: 3px 13px 23px -8px #5ba4a4;
+}
+
+.job-list .search .tag-container {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: -12px;
+}
+
+.job-list .search .tag-container .search-tag {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  background-color: #eef6f6;
+  color: #5ba4a4;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.job-list .search .tag-container .search-tag:not(:nth-child(n + 3)) {
+  margin-bottom: 12px;
+}
+
+.job-list .search .tag-container .search-tag p {
+  padding: 0 0.3rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  margin-bottom: -2px;
+}
+
+.job-list .search .tag-container .search-tag img {
+  background-color: #5ba4a4;
+  padding: 0.3rem;
+  width: 20px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.job-list .search .clear-search {
+  padding: 0.1rem 0.3rem;
+  cursor: pointer;
+  color: #2c3a3a;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.job-list .jobs {
+  padding: 1.5rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.job-list .jobs .job-card {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
+  padding: 1.5rem;
+  padding-top: 40px;
+}
+
+.job-list .jobs .job-card__details img {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  object-fit: contain;
+  width: 50px;
+}
+
+.job-list .jobs .job-card.featured {
+  border-left: 4px solid #5ba4a4;
+}
+/*# sourceMappingURL=main.css.map */
