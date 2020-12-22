@@ -34,27 +34,40 @@
   <body>
     <section class="top-section"></section>
     <section class="job-list">
-      <div class="search">
-        <div class="tag-container">
-          <div class="search-tag">
-            <p>FrontEnd</p>
-            <img src="images/icon-remove.svg" alt="" />
+      <div class="search" id="search">
+        <div class="tag-container" id="tag-container">
+          <!-- <div class="search-tag">
+            <p>Frontend</p>
+            <img
+              src="images/icon-remove.svg"
+              alt=""
+              onclick="removeTag(this)"
+            />
           </div>
           <div class="search-tag">
             <p>CSS</p>
-            <img src="images/icon-remove.svg" alt="" />
+            <img
+              src="images/icon-remove.svg"
+              alt=""
+              onclick="removeTag(this)"
+            />
           </div>
           <div class="search-tag">
             <p>JavaScript</p>
-            <img src="images/icon-remove.svg" alt="" />
-          </div>
+            <img
+              src="images/icon-remove.svg"
+              alt=""
+              onclick="removeTag(this)"
+            />
+          </div> -->
         </div>
-        <p class="clear-search">Clear</p>
+        <p class="clear-search" onclick="clearTags()">Clear</p>
       </div>
       <div class="jobs">
         <div
           class="job-card featured"
           data-tags="Frontend Senior HTML CSS JavaScriptt"
+          id="first-card"
         >
           <div class="job-card__details">
             <img src="images/photosnap.svg" alt="" />
@@ -72,11 +85,11 @@
             </div>
           </div>
           <div class="job-card__tags">
-            <p class="job-tag">Frontend</p>
-            <p class="job-tag">Senior</p>
-            <p class="job-tag">HTML</p>
-            <p class="job-tag">CSS</p>
-            <p class="job-tag">JavaScript</p>
+            <p class="job-tag" onclick="addTag(this)">Frontend</p>
+            <p class="job-tag" onclick="addTag(this)">Senior</p>
+            <p class="job-tag" onclick="addTag(this)">HTML</p>
+            <p class="job-tag" onclick="addTag(this)">CSS</p>
+            <p class="job-tag" onclick="addTag(this)">JavaScript</p>
           </div>
         </div>
         <div
@@ -99,10 +112,10 @@
             </div>
           </div>
           <div class="job-card__tags">
-            <p class="job-tag">Fullstack</p>
-            <p class="job-tag">Midweight</p>
-            <p class="job-tag">Python</p>
-            <p class="job-tag">React</p>
+            <p class="job-tag" onclick="addTag(this)">Fullstack</p>
+            <p class="job-tag" onclick="addTag(this)">Midweight</p>
+            <p class="job-tag" onclick="addTag(this)">Python</p>
+            <p class="job-tag" onclick="addTag(this)">React</p>
           </div>
         </div>
         <div class="job-card" data-tags="Frontend Junior JavaScript React Sass">
@@ -121,11 +134,11 @@
             </div>
           </div>
           <div class="job-card__tags">
-            <p class="job-tag">Frontend</p>
-            <p class="job-tag">Junior</p>
-            <p class="job-tag">JavaScript</p>
-            <p class="job-tag">React</p>
-            <p class="job-tag">Sass</p>
+            <p class="job-tag" onclick="addTag(this)">Frontend</p>
+            <p class="job-tag" onclick="addTag(this)">Junior</p>
+            <p class="job-tag" onclick="addTag(this)">JavaScript</p>
+            <p class="job-tag" onclick="addTag(this)">React</p>
+            <p class="job-tag" onclick="addTag(this)">Sass</p>
           </div>
         </div>
         <div class="job-card" data-tags="Frontend Junior CSS JavaScript">
@@ -143,10 +156,10 @@
             </div>
           </div>
           <div class="job-card__tags">
-            <p class="job-tag">Frontend</p>
-            <p class="job-tag">Junior</p>
-            <p class="job-tag">CSS</p>
-            <p class="job-tag">JavaScript</p>
+            <p class="job-tag" onclick="addTag(this)">Frontend</p>
+            <p class="job-tag" onclick="addTag(this)">Junior</p>
+            <p class="job-tag" onclick="addTag(this)">CSS</p>
+            <p class="job-tag" onclick="addTag(this)">JavaScript</p>
           </div>
         </div>
         <div
@@ -167,11 +180,11 @@
             </div>
           </div>
           <div class="job-card__tags">
-            <p class="job-tag">Fullstack</p>
-            <p class="job-tag">Midweight</p>
-            <p class="job-tag">JavaScript</p>
-            <p class="job-tag">Ruby</p>
-            <p class="job-tag">Sass</p>
+            <p class="job-tag" onclick="addTag(this)">Fullstack</p>
+            <p class="job-tag" onclick="addTag(this)">Midweight</p>
+            <p class="job-tag" onclick="addTag(this)">JavaScript</p>
+            <p class="job-tag" onclick="addTag(this)">Ruby</p>
+            <p class="job-tag" onclick="addTag(this)">Sass</p>
           </div>
         </div>
         <div class="job-card" data-tags="Backend Junior Ruby RoR">
@@ -189,10 +202,10 @@
             </div>
           </div>
           <div class="job-card__tags">
-            <p class="job-tag">Backend</p>
-            <p class="job-tag">Junior</p>
-            <p class="job-tag">Ruby</p>
-            <p class="job-tag">RoR</p>
+            <p class="job-tag" onclick="addTag(this)">Backend</p>
+            <p class="job-tag" onclick="addTag(this)">Junior</p>
+            <p class="job-tag" onclick="addTag(this)">Ruby</p>
+            <p class="job-tag" onclick="addTag(this)">RoR</p>
           </div>
         </div>
         <div class="job-card" data-tags="Frontend Junior HTML JavaScript Sass">
@@ -210,11 +223,11 @@
             </div>
           </div>
           <div class="job-card__tags">
-            <p class="job-tag">Frontend</p>
-            <p class="job-tag">Junior</p>
-            <p class="job-tag">HTML</p>
-            <p class="job-tag">JavaScript</p>
-            <p class="job-tag">Sass</p>
+            <p class="job-tag" onclick="addTag(this)">Frontend</p>
+            <p class="job-tag" onclick="addTag(this)">Junior</p>
+            <p class="job-tag" onclick="addTag(this)">HTML</p>
+            <p class="job-tag" onclick="addTag(this)">JavaScript</p>
+            <p class="job-tag" onclick="addTag(this)">Sass</p>
           </div>
         </div>
         <div class="job-card" data-tags="Frontend Junior JavaScript Vue Sass">
@@ -232,11 +245,11 @@
             </div>
           </div>
           <div class="job-card__tags">
-            <p class="job-tag">Frontend</p>
-            <p class="job-tag">Junior</p>
-            <p class="job-tag">JavaScript</p>
-            <p class="job-tag">Vue</p>
-            <p class="job-tag">Sass</p>
+            <p class="job-tag" onclick="addTag(this)">Frontend</p>
+            <p class="job-tag" onclick="addTag(this)">Junior</p>
+            <p class="job-tag" onclick="addTag(this)">JavaScript</p>
+            <p class="job-tag" onclick="addTag(this)">Vue</p>
+            <p class="job-tag" onclick="addTag(this)">Sass</p>
           </div>
         </div>
         <div
@@ -257,11 +270,11 @@
             </div>
           </div>
           <div class="job-card__tags">
-            <p class="job-tag">Fullstack</p>
-            <p class="job-tag">Midweight</p>
-            <p class="job-tag">JavaScript</p>
-            <p class="job-tag">Python</p>
-            <p class="job-tag">Django</p>
+            <p class="job-tag" onclick="addTag(this)">Fullstack</p>
+            <p class="job-tag" onclick="addTag(this)">Midweight</p>
+            <p class="job-tag" onclick="addTag(this)">JavaScript</p>
+            <p class="job-tag" onclick="addTag(this)">Python</p>
+            <p class="job-tag" onclick="addTag(this)">Django</p>
           </div>
         </div>
         <div class="job-card" data-tags="Frontend Junior JavaScript React Sass">
@@ -279,11 +292,11 @@
             </div>
           </div>
           <div class="job-card__tags">
-            <p class="job-tag">Frontend</p>
-            <p class="job-tag">Junior</p>
-            <p class="job-tag">JavaScript</p>
-            <p class="job-tag">React</p>
-            <p class="job-tag">Sass</p>
+            <p class="job-tag" onclick="addTag(this)">Frontend</p>
+            <p class="job-tag" onclick="addTag(this)">Junior</p>
+            <p class="job-tag" onclick="addTag(this)">JavaScript</p>
+            <p class="job-tag" onclick="addTag(this)">React</p>
+            <p class="job-tag" onclick="addTag(this)">Sass</p>
           </div>
         </div>
       </div>
@@ -310,5 +323,7 @@
         </svg> </a
       >.
     </p>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

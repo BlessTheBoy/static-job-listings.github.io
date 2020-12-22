@@ -5,6 +5,12 @@
   font-family: "Spartan", sans-serif;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .top-section {
   height: 25vh;
   background-color: #5ba4a4;
@@ -15,6 +21,7 @@
 }
 
 .job-list {
+  flex: 1;
   background-color: #effafa;
   padding-top: 3.5rem;
 }
@@ -48,9 +55,6 @@
   border-radius: 4px;
   margin-right: 12px;
   height: fit-content;
-}
-
-.job-list .search .tag-container .search-tag:not(:nth-child(n + 3)) {
   margin-bottom: 12px;
 }
 
