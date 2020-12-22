@@ -232,6 +232,7 @@ p.attribution a svg:hover {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
+    margin-bottom: 2rem;
   }
   .job-list .jobs .job-card__details {
     display: flex;
