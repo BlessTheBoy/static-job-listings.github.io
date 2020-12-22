@@ -93,7 +93,6 @@ function createTag(text) {
 console.log(tags);
 
 const animateCSS = (element) =>
-  // We create a Promise and return it
   new Promise((resolve, reject) => {
     element.classList.add("animate__animated", "animate__bounceIn");
 
