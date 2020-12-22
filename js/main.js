@@ -13,8 +13,10 @@ function setDisplay(jobCard) {
   if (tags.every((tag) => str.includes(tag))) {
     if (window.innerWidth > 1000) {
       jobCard.style.display = "flex";
+      animateCSS(jobCard);
     } else {
       jobCard.style.display = "block";
+      animateCSS(jobCard);
     }
   } else {
     jobCard.style.display = "none";
@@ -76,7 +78,7 @@ function clearTags() {
 
 function createTag(text) {
   let searchTag = document.createElement("div");
-  searchTag.classList = "search-tag";
+  searchTag.classList = "search-tag animate__animated animate__rubberBand";
   searchTag.id = text;
   let tagName = document.createElement("p");
   tagName.innerText = text;
@@ -89,3 +91,19 @@ function createTag(text) {
   return searchTag;
 }
 console.log(tags);
+
+const animateCSS = (element) =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    element.classList.add("animate__animated", "animate__bounceIn");
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd() {
+      element.classList.remove("animate__animated", "animate__bounceIn");
+      resolve("Animation ended");
+    }
+
+    element.addEventListener("animationend", handleAnimationEnd, {
+      once: true,
+    });
+  });
